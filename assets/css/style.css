@@ -3,3 +3,25 @@
     padding: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .wrapper video {
+        display: none;
+    }
+    .wrapper{
+        background-image: url(/assets/img/Mobile.jpg);
+        height: 100vh;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
