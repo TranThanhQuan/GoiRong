@@ -5,7 +5,7 @@
 
 .wrapper {
     background-color: #085e25;
-    min-height: 100vh;
+    height: 56.4vw;
     background-image: url(/assets/img/PC.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -13,10 +13,14 @@
 
 .btn-taigame {
     position: absolute;
-    top: 88%;
-    left: 43%;
+    top: 50vw;
+    left: 41%;
     transform: translateX(-50%);
     animation: scale 1.5s alternate infinite ease-in;
+}
+
+.btn-taigame img {
+    width: 18vw;
 }
 
 .btn-taigame a {
