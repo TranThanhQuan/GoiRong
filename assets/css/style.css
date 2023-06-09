@@ -95,7 +95,7 @@
     }
 
     .footer {
-        height: calc(100vh - 170vw);
+        height: calc(103vh - 170vw);
         min-height: 100px;
     }
 
