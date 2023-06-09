@@ -74,7 +74,7 @@
     }
 
     .wrapper {
-        background-image: url(/assets/img/Mobile.jpg);
+        background-image: url(/assets/img/Mobile1.jpg);
         /* height: 100vh; */
         min-height: auto;
         height: 160vw;
@@ -100,7 +100,7 @@
 
     .footer {
         height: calc(103vh - 170vw);
-        min-height: 100px;
+        min-height: 120px;
     }
 
     .footer-btn {
