@@ -7,41 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gọi Rồng</title>
     <link href="/assets/img/Icon_IOS.png" rel="shortcut icon" type="image/png">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/landing_at/assets/js/jquery.js"></script>
+    <script src="/landing_at/assets/js/sweetaler.js"></script>
+    <script src="/landing_at/assets/js/reponsive-mb.js"></script>
+    <link rel="stylesheet" href="/landing_at/assets/css/style.css">
+    <link rel="stylesheet" href="/landing_at/assets/css/animate.css">
 </head>
-<script type="text/javascript">
-    var jsVer = 15;
-    var phoneWidth = parseInt(window.screen.width);
-    console.log(phoneWidth);
-    var phoneScale = phoneWidth / 640;
-
-    if (phoneWidth < 768) {
-        var ua = navigator.userAgent;
-        if (/Android (\d+\.\d+)/.test(ua)) {
-            var version = parseFloat(RegExp.$1);
-            // andriod 2.3
-            if (version > 2.3) {
-                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
-            } else {
-                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
-            }
-
-        } else {
-            console.log(phoneWidth);
-            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
-        }
-
-    } else {
-        document.write('<meta name="viewport" content="width=768, minimum-scale =1, maximum-scale = 1, target-densitydpi=device-dpi">');
-    }
-
-</script>
 
 <body>
+    <div class="container">
+        <!-- wrapper -->
+        <div class="wrapper">
+            <!-- nav -->
+            <div class="nav">
+                <div class="nav-btn fan nav_fan">
+                    <a href="#"><img class="img-nav-fan" src="/landing_at/assets/img/btn-fanpage.png" alt=""></a>
+                </div>|
+                <div class="nav-btn chat nav_chat">
+                    <a href="#"><img class="img-nav_chat" src="/landing_at/assets/img/btn-chat.png" alt=""></a>
+                </div>|
+                <div class="nav-btn napthe nav_napthe">
+                    <a href="#"><img class="img-nav-napthe" src="/landing_at/assets/img/btn-nap.png" alt=""></a>
+                </div>
+            </div>
 
 
+            <!-- register -->
+            <div class="animate__tada  register">
+                <a href="javascript:commingSoom();"> <img class="register-img"
+                        src="/landing_at/assets/img/btn-luudanh.png" alt=""></a>
+            </div>
+
+
+            <!-- download -->
+            <div class="download">
+                <a href="#"><img class="download-item" src="/landing_at/assets/img/btn-ios.png" alt=""></a>
+                <a href="#"><img class="download-item" src="/landing_at/assets/img/btn-apk.png" alt=""></a>
+                <a href="#"><img class="download-item" src="/landing_at/assets/img/btn-pc.png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+    <script src="/landing_at/assets/js/index.js"></script>
 </body>
 
 </html>
