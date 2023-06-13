@@ -6,18 +6,35 @@
 
 
 /* container */
-.container {}
+.container {
+    background-image: url(/landing_at/assets/img/bg-pc.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
+.bg_nav{
+    position: fixed;
+    width: 100vw;
+    height:3vw;
+    background-color: black;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* bg_video */
+.bg_video {
+    width: 100%;
+    height: 56vw;
+}
 
 /* wrapper */
 .wrapper {
     position: relative;
-    background-image: url(/landing_at/assets/img/bg-pc.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
     width: 100%;
     height: 56vw;
 }
+
 /* end wrapper */
 
 
@@ -31,13 +48,15 @@
     display: flex;
     color: #fff;
     font-size: 1.5vw;
-    line-height:3vw;
-    font-weight: 700    ;
+    line-height: 3vw;
+    font-weight: 700;
 }
+
 .nav-btn img:hover {
     cursor: pointer;
     filter: drop-shadow(15px 8px 10px rgb(186, 179, 179));
 }
+
 .img-nav-fan {
     width: 7vw;
 }
@@ -45,50 +64,159 @@
 .img-nav_chat {
     width: 13.3vw;
 }
+
 .img-nav-napthe {
     width: 7vw;
 }
+
 .nav_fan {
-    line-height: 3.5vw;
+    line-height: 2.9vw;
     margin-right: 1.2vw;
 }
+
 .nav_chat {
-    line-height: 3.5vw;
+    line-height: 2.7vw;
 
     margin: 0 1.2vw;
 }
+
 .nav_napthe {
-    line-height: 4vw;
+    line-height: 2.7vw;
     margin-left: 1.2vw;
-    
+
 }
+
 /* end nav */
 
 
 
 
 /* register */
-.register {
+
+.user-register {
     position: absolute;
-    top: 56%;
+    top: 38.2vw;
+    left: 51vw;
+}
+
+.user-register img {
+    width: 37vw;
+}
+
+.inner-user-register {
+    position: absolute;
+    top: 38.4vw;
+    left: 54.8vw;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.7vw;
+}
+
+/* popup */
+.trigger {
+    position: absolute;
+    text-align: center;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: cursive;
+    background-color: transparent;
+    top: 51%;
     left: 58%;
-    animation: animate__tada alternate 4s linear infinite;
-}
-
-.register:hover{
     cursor: pointer;
-    filter: saturate(2);
+    animation:  alternate 6s linear infinite;
 }
 
-.register-img {
+.register-img{
     width: 20vw;
 }
+.trigger:hover {
+    filter: saturate(2);
+
+}
+
+.modal {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.img-close-button {
+    width: 3vw;
+}
+
+.btn-xacnhan {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.btn-xacnhan:hover {
+    cursor: pointer;
+}
+
+
+
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
+
+.modal-content {
+    background-color: transparent;
+    text-align: center;
+}
+
+.img-popup {
+    width: 50vw;
+}
+
+.img-btn-xacnhan {
+    width: 23vw;
+}
+
+
+
+
 
 /* donwload */
 
 .download {
     position: absolute;
-    top: 79%;
+    top: 75%;
     left: 40%;
     display: flex;
 }
@@ -97,7 +225,7 @@
     width: 19vw;
 }
 
-.download-item:hover{
+.download-item:hover {
     cursor: pointer;
     filter: saturate(4);
 }
@@ -109,6 +237,7 @@
     width: 100%;
     color: #eee;
 }
+
 /* end donwload */
 
 
