@@ -127,22 +127,22 @@
 /* TRAILER */
 .trailer{
     position: absolute;
-    top: 33vw;
+    top: 32vw;
     left: 44vw;
 }
 
 .trailer img{
-    width: 8vw;
+    width: 6.18vw;
 }
 
 .napthe-btn{
     position: absolute;
-    top: 32vw;
-    left: 84vw;
+    top: 31vw;
+    left: 80vw;
 }
 
 .napthe-btn img{
-    width: 8vw;
+    width: 15vw;
 }
 
 
