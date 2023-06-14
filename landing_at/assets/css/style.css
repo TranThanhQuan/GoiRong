@@ -58,36 +58,63 @@
 }
 
 .img-nav-fan {
-    width: 7vw;
+    width: 6vw;
 }
 
 .img-nav_chat {
-    width: 13.3vw;
+    width: 11.7vw;
 }
 
 .img-nav-napthe {
-    width: 7vw;
+    width: 6vw;
 }
 
 .nav_fan {
-    line-height: 2.9vw;
+    line-height: 3.3vw;
     margin-right: 1.2vw;
 }
 
 .nav_chat {
-    line-height: 2.7vw;
+    line-height: 3.3vw;
 
     margin: 0 1.2vw;
 }
 
 .nav_napthe {
-    line-height: 2.7vw;
+    line-height: 3.9vw;
     margin-left: 1.2vw;
 
 }
 
 /* end nav */
 
+
+
+/* LOGO */
+.logo{
+position: absolute;
+top: 4vw;
+right: 18vw;
+}
+
+.logo img{
+    width: 25vw;
+}
+
+
+/* DATE */
+.date{
+    font-family: 'Josefin Sans', sans-serif;
+    transform: rotate(-4deg);
+    position: absolute;
+    top: 29vw;
+    right: 14vw;
+    font-size: 2vw;
+    font-weight: 700;
+    color: #fff;
+    /* text-shadow: rgb(12, 12, 12) 1px 0 10px; */
+    text-shadow: 1px 1px 2px rgb(36, 36, 36), 0 0 0.1em rgb(0, 0, 0), 0 0 0.1em rgb(0, 0, 0);
+}
 
 
 
@@ -100,13 +127,13 @@
 }
 
 .user-register img {
-    width: 37vw;
+    width: 30vw;
 }
 
 .inner-user-register {
     position: absolute;
-    top: 38.4vw;
-    left: 54.8vw;
+    top: 38.45vw;
+    left: 54.4vw;
     color: #fff;
     font-weight: 700;
     font-size: 1.7vw;
@@ -122,14 +149,14 @@
     border-radius: 5px;
     font-family: cursive;
     background-color: transparent;
-    top: 51%;
-    left: 58%;
+    top: 55%;
+    left: 61%;
     cursor: pointer;
     animation:  alternate 6s linear infinite;
 }
 
 .register-img{
-    width: 20vw;
+    width: 16vw;
 }
 .trigger:hover {
     filter: saturate(2);
@@ -172,16 +199,39 @@
     width: 3vw;
 }
 
+.img-close-button:hover {
+filter: brightness(20%);
+transition:all 0.2s;
+}
 .btn-xacnhan {
     position: absolute;
-    bottom: 0;
+    bottom: 4vw;
     left: 50%;
     transform: translate(-50%);
 }
 
 .btn-xacnhan:hover {
     cursor: pointer;
+    filter: brightness(130%);
 }
+
+.img-btn-xacnhan {
+    width: 16vw;
+}
+
+
+.input-email{
+    position: absolute;
+    top: 15vw;
+    left: 11.5vw;
+}
+.input-email input{
+    width: 30vw;
+    height: 3vw;
+    border-radius: 0.5vw;
+    font-size: 2vw;
+}
+
 
 
 
@@ -204,10 +254,6 @@
     width: 50vw;
 }
 
-.img-btn-xacnhan {
-    width: 23vw;
-}
-
 
 
 
@@ -216,7 +262,7 @@
 
 .download {
     position: absolute;
-    top: 75%;
+    top: 73%;
     left: 40%;
     display: flex;
 }
@@ -240,7 +286,14 @@
 
 /* end donwload */
 
+/* footer */
 
+.footer{
+    text-align: center;
+    padding-top:4vw
+}
+
+/* end footer */
 
 
 
