@@ -109,42 +109,40 @@
 
 
 /* DATE */
-.date {
-    font-family: 'alberta', sans-serif;
+.date{
+    /* font-family: 'Josefin Sans', sans-serif; */
+    font-family: 'utm-alberta-heavy-regular', sans-serif;
     transform: rotate(-4deg);
     position: absolute;
-    top: 28.2vw;
-    right: 10vw;
-    font-size: 2.5vw;
+    top: 29vw;
+    right: 12vw;
+    font-size: 2vw;
     font-weight: 900;
     color: #fff;
-    -webkit-text-stroke: 2px #000;
-    text-shadow: rgb(12, 12, 12) 1px 0 10px;
-    text-shadow: 1px 1px 2px rgb(36, 36, 36), 0 0 0.1em rgb(0, 0, 0), 0 0 0.1em rgb(0, 0, 0);
+    /* -webkit-text-stroke: 2px #000; */
+    /* text-shadow: rgb(12, 12, 12) 1px 0 10px; */
+    /* text-shadow: 1px 1px 2px rgb(36, 36, 36), 0 0 0.1em rgb(0, 0, 0), 0 0 0.1em rgb(0, 0, 0); */
 }
 
 /* TRAILER */
-.trailer {
+.trailer{
     position: absolute;
     top: 33vw;
     left: 44vw;
-    animation:  alternate 2.5s linear infinite;
 }
 
-.trailer img {
-    width: 6.5vw;
+.trailer img{
+    width: 8vw;
 }
 
-.napthe-btn {
+.napthe-btn{
     position: absolute;
     top: 32vw;
     left: 84vw;
-    animation:  alternate 5s linear infinite;
-
 }
 
-.napthe-btn img {
-    width: 6vw;
+.napthe-btn img{
+    width: 8vw;
 }
 
 
@@ -264,7 +262,6 @@
     height: 3vw;
     border-radius: 0.5vw;
     font-size: 2vw;
-    padding-left: 1vw;
 }
 
 
