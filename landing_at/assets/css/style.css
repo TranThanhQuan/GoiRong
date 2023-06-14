@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'alberta';
+    src: url(/landing_at/assets/font/UTM\ Alberta\ Heavy.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +17,10 @@
     background-repeat: no-repeat;
 }
 
-.bg_nav{
+.bg_nav {
     position: fixed;
     width: 100vw;
-    height:3vw;
+    height: 3vw;
     background-color: black;
     top: 0;
     left: 0;
@@ -91,52 +96,52 @@
 
 
 /* LOGO */
-.logo{
-position: absolute;
-top: 4vw;
-right: 18vw;
+.logo {
+    position: absolute;
+    top: 4vw;
+    right: 18vw;
+
 }
 
-.logo img{
+.logo img {
     width: 25vw;
 }
 
 
 /* DATE */
-.date{
-    /* font-family: 'Josefin Sans', sans-serif; */
-    font-family: 'utm-alberta-heavy-regular', sans-serif;
+.date {
+    font-family: 'alberta', sans-serif;
     transform: rotate(-4deg);
     position: absolute;
-    top: 29vw;
-    right: 12vw;
-    font-size: 2vw;
+    top: 28.2vw;
+    right: 10vw;
+    font-size: 2.5vw;
     font-weight: 900;
     color: #fff;
-    /* -webkit-text-stroke: 2px #000; */
-    /* text-shadow: rgb(12, 12, 12) 1px 0 10px; */
-    /* text-shadow: 1px 1px 2px rgb(36, 36, 36), 0 0 0.1em rgb(0, 0, 0), 0 0 0.1em rgb(0, 0, 0); */
+    -webkit-text-stroke: 2px #000;
+    text-shadow: rgb(12, 12, 12) 1px 0 10px;
+    text-shadow: 1px 1px 2px rgb(36, 36, 36), 0 0 0.1em rgb(0, 0, 0), 0 0 0.1em rgb(0, 0, 0);
 }
 
 /* TRAILER */
-.trailer{
+.trailer {
     position: absolute;
-    top: 31vw;
-    left: 40vw;
+    top: 33vw;
+    left: 44vw;
 }
 
-.trailer img{
-    width: 8vw;
+.trailer img {
+    width: 6.5vw;
 }
 
-.napthe-btn{
+.napthe-btn {
     position: absolute;
-    top: 30vw;
-    left: 85vw;
+    top: 32vw;
+    left: 84vw;
 }
 
-.napthe-btn img{
-    width: 8vw;
+.napthe-btn img {
+    width: 6vw;
 }
 
 
@@ -172,15 +177,16 @@ right: 18vw;
     border-radius: 5px;
     font-family: cursive;
     background-color: transparent;
-    top: 55%;
+    top: 56.3%;
     left: 61%;
     cursor: pointer;
-    animation:  alternate 6s linear infinite;
+    animation: alternate 6s linear infinite;
 }
 
-.register-img{
-    width: 16vw;
+.register-img {
+    width: 14vw;
 }
+
 .trigger:hover {
     filter: saturate(2);
 
@@ -223,9 +229,10 @@ right: 18vw;
 }
 
 .img-close-button:hover {
-filter: brightness(20%);
-transition:all 0.2s;
+    filter: brightness(20%);
+    transition: all 0.2s;
 }
+
 .btn-xacnhan {
     position: absolute;
     bottom: 4vw;
@@ -243,12 +250,13 @@ transition:all 0.2s;
 }
 
 
-.input-email{
+.input-email {
     position: absolute;
     top: 15vw;
     left: 11.5vw;
 }
-.input-email input{
+
+.input-email input {
     width: 30vw;
     height: 3vw;
     border-radius: 0.5vw;
@@ -312,9 +320,9 @@ transition:all 0.2s;
 
 /* footer */
 
-.footer{
+.footer {
     text-align: center;
-    padding-top:4vw
+    padding-top: 4vw
 }
 
 /* end footer */
