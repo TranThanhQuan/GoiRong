@@ -1,9 +1,3 @@
-function commingSoom() {
-    swal({ title: 'Coming Soon...' });
-}
-
-
-
 
 var modal = document.querySelector(".modal");
 var trigger = document.querySelector(".trigger");
@@ -22,3 +16,25 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+
+$(".trailer").click(function () {
+    $(".modalTrailer ").toggleClass("show-modal-trailer");
+});
+
+$(".close-button-trailer").click(function () {
+    $(".modalTrailer ").toggleClass("show-modal-trailer");
+});
+
+$(".modalTrailer").click(function () {
+    $(".modalTrailer ").removeClass("show-modal-trailer");
+});
+
+
+
+
+
+
+
+
+

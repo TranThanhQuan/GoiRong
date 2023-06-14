@@ -126,14 +126,63 @@
     position: absolute;
     top: 32vw;
     left: 44vw;
-    animation: animate_btn alternate  0.4s linear infinite;
+    animation: animate_btn alternate 0.4s linear infinite;
 
 
 }
 
 .trailer img {
-    width: 6.18vw;
+    width: 6vw;
 }
+
+
+
+.modalTrailer {
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content-traier {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+
+.show-modal-trailer {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.close-button-trailer {
+    position: absolute;
+    top: 3vw;
+    right: 3vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.iframe {
+    width: 60vw;
+    height: 34.1vw;
+}
+
+
+
 
 
 
@@ -184,6 +233,8 @@
 
 }
 
+
+
 .modal {
     z-index: 10;
     position: fixed;
@@ -198,6 +249,15 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
 
+
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 .modal-content {
     position: absolute;
     top: 50%;
@@ -205,6 +265,19 @@
     transform: translate(-50%, -50%);
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
+}
+
+
+
+.modal-content {
+    background-color: transparent;
+    text-align: center;
+}
+
+
+
+.img-popup {
+    width: 50vw;
 }
 
 .close-button {
@@ -241,7 +314,6 @@
     width: 16vw;
 }
 
-
 .input-email {
     position: absolute;
     top: 15vw;
@@ -257,29 +329,7 @@
 }
 
 
-
-
-
-.show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
-
-
-
-.modal-content {
-    background-color: transparent;
-    text-align: center;
-}
-
-.img-popup {
-    width: 50vw;
-}
-
-
-
+/* trailer */
 
 
 /* donwload */
@@ -293,6 +343,10 @@
 
 .download-item {
     width: 19vw;
+}
+
+.download-item-ios {
+    display: none;
 }
 
 .download-item:hover {
@@ -342,14 +396,130 @@
 
 @media only screen and (max-width: 768px) {
 
-    .container{
+    .container {
         background-image: url(/landing_at/assets/img/bg_m.jpg);
         height: 1000px;
     }
 
-    .wrapper{
+    .bg_video {
         display: none;
     }
 
+    .bg_nav {
+        display: none;
+    }
+
+    .date {
+        top: 98vw;
+        right: 5vw;
+    }
+
+    .date img {
+        width: 90vw;
+    }
+
+    .trailer {
+        top: 110vw;
+        left: 21vw;
+    }
+
+    .trailer img {
+        width: 11vw;
+    }
+
+    .trigger {
+        top: 188.3%;
+        left: 47%;
+    }
+
+    .register-img {
+        width: 36vw;
+    }
+
+    .user-register {
+        transform: rotate(2deg);
+        top: 124.2vw;
+        left: 2vw;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .user-register img {
+        width: 93vw;
+    }
+
+    .inner-user-register {
+        transform: rotate(2deg);
+
+        top: 123.45vw;
+        left: 11.4vw;
+        font-size: 6vw;
+    }
+
+
+    .download {
+        top: 879px;
+        left: 10%;
+    }
+
+    .download-item-pc {
+        display: none;
+    }
+
+
+    .download-item-apk {
+        display: none;
+    }
+
+    .download-item-ios {
+        display: block;
+    }
+
+    .download-item {
+        width: 42vw;
+    }
+
+
+    .iframe {
+        width: 565px;
+        height: 321px;
+    }
+
+
+    .img-popup {
+        width: 543px;
+    }
+
+    .img-close-button {
+        width: 48px;
+    }
+
+    .input-email input {
+        width: 300px;
+        height: 40px;
+    }
+
+    .input-email {
+        top: 152px;
+        left: 134px;
+    }
+
+
+    .img-btn-xacnhan {
+        width: 224px;
+    }
+
     
+    .btn-xacnhan {
+    position: absolute;
+    bottom: 50px;}
+
+    .footer {
+        /* display: none; */
+        margin-top: 100vw;
+    }
+
+
 }
