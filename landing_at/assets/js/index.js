@@ -1,4 +1,4 @@
-
+// trailer popup
 var modal = document.querySelector(".modal");
 var trigger = document.querySelector(".trigger");
 var closeButton = document.querySelector(".close-button");
@@ -29,6 +29,21 @@ $(".close-button-trailer").click(function () {
 $(".modalTrailer").click(function () {
     $(".modalTrailer ").removeClass("show-modal-trailer");
 });
+
+
+
+// nav mb
+$('.close-mb').click(function () {
+    $('.bg_nav_mb').toggleClass('show-nav-mb');
+})
+
+$('.open-mb').click(function () {
+    $('.bg_nav_mb').show();
+    $('.bg_nav_mb').toggleClass('show-nav-mb');
+})
+
+
+
 
 
 
