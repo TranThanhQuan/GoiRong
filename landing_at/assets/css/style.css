@@ -15,6 +15,8 @@
     background-image: url(/landing_at/assets/img/bg-pc.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    background: black;
+    height: 100vh;
 
 }
 
@@ -391,9 +393,101 @@
     padding-left: 1vw;
 }
 
-
 /* trailer */
 
+.codeLuuDanh {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    display: none;
+
+}
+
+.codeLuuDanh-content {
+    width: 30vw;
+    height: 20vw;
+    background-color: rgb(48, 47, 47);
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    padding-top: 1vw;
+    font-size: 2vw;
+    font-weight: 700;
+}
+
+.code-group {
+    display: flex;
+    color: #232323;
+    padding: 3vw;
+}
+
+
+.code {
+    width: 75%;
+    height: 2.8vw;
+    background-color: #eee;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 2vw;
+    text-align: initial;
+}
+
+.copy {
+    width: 25%;
+    background-color: #f7f6f6;
+    font-weight: 700;
+    border-radius: 4px;
+    font-size: 2vw;
+    margin-left: 1vw;
+
+}
+
+.copy:hover {
+    background-color: #d6cbcb;
+    cursor: pointer;
+}
+
+
+.close-luudanh {
+
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 1.2vw;
+    color: #000000;
+    text-align: end;
+    padding-right: 1vw;
+    padding-top: 1vw;
+    width: 2vw;
+    height: 1.5vw;
+    margin-left: auto;
+}
+
+.close-luudanh:hover {
+    cursor: pointer;
+
+}
+
+.close-luudanh img:hover {
+    filter: brightness(20%);
+    width: 2.2vw;
+    transition: all 0.2s;
+
+}
+
+.close-luudanh img {
+    width: 2vw;
+    height: 1.5vw;
+
+}
+
+.code-title {
+    opacity: 0;
+}
 
 /* donwload */
 
@@ -465,6 +559,8 @@
         background-color: black;
         height: 100vh;
         background-image: url(/landing_at/assets/img/bg_m.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
 
 
@@ -586,8 +682,37 @@
         bottom: 50px;
     }
 
+    .codeLuuDanh-content {
+        min-width: 477px;
+        min-height: 277px;
+    }
+
+    .title {
+        font-size: 5vw;
+    }
+
+    .code {
+        font-size: 5vw;
+        height: 7.8vw;
+    }
+
+    .copy {
+        font-size: 5vw;
+    }
+
+    .close-luudanh img {
+        width: 6vw;
+        height: 5.5vw;
+    }
+
+    .close-luudanh {
+        padding-right: 6vw;
+    }
+
     .footer {
         /* display: none; */
     }
+
+
 
 }

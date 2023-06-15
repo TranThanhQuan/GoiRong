@@ -1,3 +1,9 @@
+function copy(){
+    window.navigator.clipboard.writeText(1);
+}
+
+
+
 // trailer popup
 var modal = document.querySelector(".modal");
 var trigger = document.querySelector(".trigger");
@@ -16,6 +22,7 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
 
 
 $(".trailer").click(function () {
@@ -73,7 +80,11 @@ $(".btn-xacnhan").click(function () {
         if (localStorage.getItem("codeLuuDanh") != null) {
             let codeLuuDanh = localStorage.getItem("codeLuuDanh");
             // console.log(codeLuuDanh)
-            swal(`Code của bạn là:${codeLuuDanh}`);
+            $('.code').html(localStorage.getItem("codeLuuDanh"));
+            $(".codeLuuDanh").css("display", "block");
+            $(".modal ").toggleClass("show-modal");
+
+            // swal(`Code của bạn là:${codeLuuDanh}`);
         } else {
             getData();
             // console.log($("input[name=email]").val());
@@ -82,9 +93,16 @@ $(".btn-xacnhan").click(function () {
         swal("Định dạng email chưa đúng!");
     }
 
-
 });
 
+
+$('.close-luudanh').click(function () {
+    $(".codeLuuDanh").css("display", "none");
+    $("input[name=email]").val('');
+    $(".code-title").css("opacity", "0");
+
+
+})
 
 
 
@@ -95,6 +113,7 @@ function getData() {
     $.ajax({
         url: 'https://goirong.com/backend/submitmail.php',
         type: 'post',
+        dataType: 'json',
         data: {
             email: email,
         },
@@ -102,12 +121,37 @@ function getData() {
         },
         success: function (res) {
             console.log(res);
-            swal(`Code của bạn là:${res.code}`);
+            localStorage.setItem("codeLuuDanh", res.code);
+            // swal(`Code của bạn là:${res.code}`);
+            $('.code').html(localStorage.getItem("codeLuuDanh"));
         },
         complete: function () {
         }
     });
 }
+
+
+// copy
+function copyToClipboard(){
+    let val = localStorage.getItem("codeLuuDanh");
+    const selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
+  }
+
+  $('.copy').click(function () {
+    $(".code-title").css("opacity", "1");
+})
+
+
 
 
 
