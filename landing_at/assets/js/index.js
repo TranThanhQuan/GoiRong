@@ -1,4 +1,4 @@
-function copy(){
+function copy() {
     window.navigator.clipboard.writeText(1);
 }
 
@@ -65,7 +65,6 @@ if (userAgent.search("iphone") > -1) {
 
 
 // CHECK MAIL
-
 function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
@@ -78,16 +77,15 @@ $(".btn-xacnhan").click(function () {
     }
     if (validateEmail($('.input-email-content').val())) {
         if (localStorage.getItem("codeLuuDanh") != null) {
-            let codeLuuDanh = localStorage.getItem("codeLuuDanh");
-            // console.log(codeLuuDanh)
-            $('.code').html(localStorage.getItem("codeLuuDanh"));
             $(".codeLuuDanh").css("display", "block");
             $(".modal ").toggleClass("show-modal");
+            $('.code').html(localStorage.getItem("codeLuuDanh"));
 
-            // swal(`Code của bạn là:${codeLuuDanh}`);
         } else {
+            // $('.code').html(res.code);
             getData();
-            // console.log($("input[name=email]").val());
+            $(".codeLuuDanh").css("display", "block");
+            $(".modal ").toggleClass("show-modal");
         }
     } else {
         swal("Định dạng email chưa đúng!");
@@ -100,16 +98,10 @@ $('.close-luudanh').click(function () {
     $(".codeLuuDanh").css("display", "none");
     $("input[name=email]").val('');
     $(".code-title").css("opacity", "0");
-
-
 })
-
-
 
 function getData() {
     let email = $("input[name=email]").val();
-
-    console.log(email);
     $.ajax({
         url: 'https://goirong.com/backend/submitmail.php',
         type: 'post',
@@ -122,8 +114,7 @@ function getData() {
         success: function (res) {
             console.log(res);
             localStorage.setItem("codeLuuDanh", res.code);
-            // swal(`Code của bạn là:${res.code}`);
-            $('.code').html(localStorage.getItem("codeLuuDanh"));
+            $('.code').html(res.code);
         },
         complete: function () {
         }
@@ -131,8 +122,9 @@ function getData() {
 }
 
 
+
 // copy
-function copyToClipboard(){
+function copyToClipboard() {
     let val = localStorage.getItem("codeLuuDanh");
     const selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
@@ -145,9 +137,9 @@ function copyToClipboard(){
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
-  }
+}
 
-  $('.copy').click(function () {
+$('.copy').click(function () {
     $(".code-title").css("opacity", "1");
 })
 
