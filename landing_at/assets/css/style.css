@@ -407,11 +407,11 @@
 
 .codeLuuDanh-content {
     width: 30vw;
-    height: 20vw;
-    background-color: rgb(48, 47, 47);
+    height: 17vw;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     text-align: center;
-    color: #fff;
+    color: #000000;
 }
 
 .title {
@@ -435,11 +435,13 @@
     font-weight: 700;
     font-size: 2vw;
     text-align: initial;
+    text-align: center;
+
 }
 
 .copy {
     width: 25%;
-    background-color: #f7f6f6;
+    background-color: #54c8ff;
     font-weight: 700;
     border-radius: 4px;
     font-size: 2vw;
