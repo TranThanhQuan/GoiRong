@@ -1,6 +1,5 @@
 var jsVer = 15;
     var phoneWidth = parseInt(window.screen.width);
-    console.log(phoneWidth);
     var phoneScale = phoneWidth / 640;
 
     if (phoneWidth < 768) {
@@ -15,7 +14,6 @@ var jsVer = 15;
             }
 
         } else {
-            console.log(phoneWidth);
             document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
         }
 

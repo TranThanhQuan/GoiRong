@@ -61,7 +61,7 @@
 .nav-btn img:hover {
     cursor: pointer;
     animation: animate_btn alternate 0.5s linear infinite;
-    
+
     /* filter: drop-shadow(15px 8px 10px rgb(186, 179, 179)); */
 }
 
@@ -412,6 +412,8 @@
     display: none;
 }
 
+
+
 .download-item:hover {
     cursor: pointer;
     filter: saturate(4);
@@ -469,6 +471,7 @@
     .wrapper {
         height: 1015px;
     }
+
     .bg_video {
         display: none;
     }
@@ -574,11 +577,9 @@
         left: 134px;
     }
 
-
     .img-btn-xacnhan {
         width: 224px;
     }
-
 
     .btn-xacnhan {
         position: absolute;
@@ -588,9 +589,5 @@
     .footer {
         /* display: none; */
     }
-
-
-
-
 
 }
