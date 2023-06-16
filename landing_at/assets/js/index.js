@@ -229,11 +229,7 @@ const obj = document.getElementById("value");
 // animateValue(obj, 0, 1000, 1500);
 
 
-
-
-
-
-
-
-
-
+      
+function ComingSoon(){
+    swal("Coming Soon");
+}
