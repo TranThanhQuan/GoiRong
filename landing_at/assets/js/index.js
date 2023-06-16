@@ -76,16 +76,23 @@ $(".btn-xacnhan").click(function () {
         return 0;
     }
     if (validateEmail($('.input-email-content').val())) {
-        if (localStorage.getItem("codeLuuDanh") != null) {
-            $(".codeLuuDanh").css("display", "block");
-            $(".modal ").toggleClass("show-modal");
-            $('.code').html(localStorage.getItem("codeLuuDanh"));
 
+        if (localStorage.getItem("codeLuuDanh") != null) {
+            if (localStorage.getItem("codeLuuDanh") == '') {
+                getData();
+                $(".codeLuuDanh ").toggleClass("codeLuuDanh-show");
+                $(".modal ").toggleClass("show-modal");
+            } else {
+                $(".codeLuuDanh ").toggleClass("codeLuuDanh-show");
+                $(".modal ").toggleClass("show-modal");
+                $('.code').html(localStorage.getItem("codeLuuDanh"));
+            }
         } else {
             // $('.code').html(res.code);
             getData();
-            $(".codeLuuDanh").css("display", "block");
+            $(".codeLuuDanh ").toggleClass("codeLuuDanh-show");
             $(".modal ").toggleClass("show-modal");
+
         }
     } else {
         swal("Định dạng email chưa đúng!");
@@ -93,12 +100,17 @@ $(".btn-xacnhan").click(function () {
 
 });
 
+// || localStorage.getItem("codeLuuDanh") ==''
 
 $('.close-luudanh').click(function () {
-    $(".codeLuuDanh").css("display", "none");
+    $(".codeLuuDanh ").toggleClass("codeLuuDanh-show");
     $("input[name=email]").val('');
     $(".code-title").css("opacity", "0");
 })
+
+function checkCode(a) {
+    return a;
+}
 
 function getData() {
     let email = $("input[name=email]").val();
@@ -113,13 +125,52 @@ function getData() {
         },
         success: function (res) {
             console.log(res);
-            localStorage.setItem("codeLuuDanh", res.code);
-            $('.code').html(res.code);
+            check(res);
         },
         complete: function () {
+
         }
     });
+    return 'aaa';
 }
+
+// console.log(getData())
+
+
+
+function check(res) {
+    if (res.msg == "mail đã tồn tại") {
+        console.log(res.msg);
+        swal("mail đã tồn tại");
+        emailtontai();
+        // console.log('mail đã tồn tại')
+        // return "mail đã tồn tại";
+    }
+    if (res.msg == "code đã hết vui lòng quay lại sau") {
+        console.log(res.msg)
+        swal("code đã hết vui lòng quay lại sau");
+        // // return "mail đã tồn tại";
+        // console.log('code đã hết vui lòng quay lại sau')
+        codehet();
+    }
+    localStorage.setItem("codeLuuDanh", res.code);
+    $('.code').html(res.code);
+}
+
+function codehet() {
+    $(".codeLuuDanh ").toggleClass("codeLuuDanh-show");
+}
+
+function emailtontai() {
+    $(".codeLuuDanh ").toggleClass("codeLuuDanh-show");
+}
+
+
+
+
+
+
+// check maill 
 
 // copy
 function copyToClipboard() {
@@ -153,7 +204,7 @@ function userRegister() {
         beforeSend: function () {
         },
         success: function (res) {
-                animateValue(obj, 0, res.sochienbinh, 1000);
+            animateValue(obj, 0, res.sochienbinh, 1000);
         },
         complete: function () {
         }
@@ -176,9 +227,6 @@ function animateValue(obj, start, end, duration) {
 }
 const obj = document.getElementById("value");
 // animateValue(obj, 0, 1000, 1500);
-
-
-
 
 
 

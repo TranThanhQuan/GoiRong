@@ -402,7 +402,10 @@
     transform: translateX(-50%);
     z-index: 11;
     display: none;
+}
 
+.codeLuuDanh-show{
+    display: block !important;
 }
 
 .codeLuuDanh-content {
