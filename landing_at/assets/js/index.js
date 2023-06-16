@@ -103,7 +103,7 @@ $('.close-luudanh').click(function () {
 function getData() {
     let email = $("input[name=email]").val();
     $.ajax({
-        url: 'https://goirong.com/backend/submitmail.php',
+        url: 'https://goirongat.tranthanhquan.com/backend/submitmail.php',
         type: 'post',
         dataType: 'json',
         data: {
@@ -120,8 +120,6 @@ function getData() {
         }
     });
 }
-
-
 
 // copy
 function copyToClipboard() {
@@ -142,6 +140,43 @@ function copyToClipboard() {
 $('.copy').click(function () {
     $(".code-title").css("opacity", "1");
 })
+
+// số user đăng ký
+userRegister();
+function userRegister() {
+    $.ajax({
+        url: 'https://goirongat.tranthanhquan.com/backend/chienbinhluudanh.php',
+        type: 'get',
+        dataType: 'json',
+        data: {
+        },
+        beforeSend: function () {
+        },
+        success: function (res) {
+                animateValue(obj, 0, res.sochienbinh, 1000);
+        },
+        complete: function () {
+        }
+    });
+
+}
+
+// number animations
+function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        obj.innerHTML = Math.floor(progress * (end - start) + start);
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+const obj = document.getElementById("value");
+// animateValue(obj, 0, 1000, 1500);
+
 
 
 
